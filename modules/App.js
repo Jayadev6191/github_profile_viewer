@@ -1,6 +1,8 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Jumbotron from './Jumbotron'
+import d3 from 'd3'
+import Navbar from '../components/Navbar'
+import Main from '../components/Main'
+
 
 export default React.createClass({
   getInitialState: function(){
@@ -8,31 +10,18 @@ export default React.createClass({
         page: 'home'
     }
   },
-  handleHomeClick: function(){
-    this.setState({
-      page: 'home'
-    });
+  componentWillMount: function(){
+    console.log("component will mount","hi");
   },
-  handleAboutClick: function(){
-    this.setState({
-      page: 'about'
-    });
+  componentDidMount: function(){
+    console.log("component did mount","hi");
   },
   render() {
-    let jumbotron;
-    if(this.state.page == 'home'){
-      jumbotron = <Jumbotron/>;
-    }else if(this.state.page == 'about'){
-      jumbotron = '';
-    }
+    console.log("render");
     return (
     	<div>
-    		<Navbar color="dark"
-                page={this.state.page}
-                homeClick={this.handleHomeClick}
-                aboutClick={this.handleAboutClick}
-          />
-        {jumbotron}
+    		<Navbar color="dark" brand="Github Profile Viewer"/>
+        <Main/>
     	</div>
     )
   }

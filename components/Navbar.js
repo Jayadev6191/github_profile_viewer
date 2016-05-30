@@ -37,12 +37,7 @@ export default React.createClass({
             </button>
             <a className="navbar-brand" href="#">{this.props.brand}</a>
           </div>
-          <div id="navbar" className="navbar-collapse collapse">
-            <ul className="nav navbar-nav">
-              <li className={homeActive}><a onClick={this.props.homeClick} href="#">Home</a></li>
-              <li className={aboutActive}><a onClick={this.props.aboutClick} href="#">About</a></li>
-            </ul>
-          </div>
+          
         </div>
       </nav>
 

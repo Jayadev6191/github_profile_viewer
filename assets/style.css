@@ -1,5 +1,13 @@
 body{
-  background-color: #78B09C;
+  background-color: #BD9D7E;
+}
+
+#main{
+  margin-top:20px;
+}
+
+.label{
+  margin-right: 10px;
 }
 
 .navbar.navbar-inverse{
@@ -14,4 +22,8 @@ body{
 .jumbotron a.btn.btn-primary{
   background-color: #222;
   border-color: #080808;
+}
+
+#buttons{
+  margin-bottom: 30px;
 }
